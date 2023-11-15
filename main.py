@@ -19,13 +19,28 @@ age = int(input("Enter age: "))
 address = input("Enter address: ")
 
 new_json_object = {
-    '이름': name,
-    '나이': age,
-    '동네': address
+    'name': name,
+    'age': age,
+    'city': address
 }
 
 write_json(new_json_object)
 updated_data = load_json()
 pprint(updated_data)
+# for person in updated_data['person']:
+#     print(person['name'])
+
+search_word = input("Enter search name: ")
+def search_object(search_word):
+    data = load_json()
+    for person in data['person']:
+        if person['name'] == search_word:
+            print("Exist")
+            return
+    print("Not exist")
+
+search_object(search_word)
+
+
     
 
