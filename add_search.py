@@ -49,7 +49,6 @@ def find_matching_anime(search_word):
 
     return matches
 
-
 # title = input("Enter title: ")
 # genre_input = input("Enter genre (comma-separated if multiple genres): ")
 # genres = [genre.strip() for genre in genre_input.split(',')]
